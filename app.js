@@ -12,7 +12,7 @@ const feedback = document.getElementById("feedback");
 
 window.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch("mots.json");
+    const response = await fetch("./mots.json");
     if (!response.ok) {
       throw new Error("Erreur lors du chargement du fichier mots.json");
     }
@@ -33,7 +33,6 @@ function startGame() {
     alert("Aucun mot disponible dans la liste.");
     return;
   }
-  startButton.classList.add("hidden");
   gameArea.classList.remove("hidden");
   currentWordIndex = 0;
   playWord();
@@ -68,18 +67,19 @@ document.querySelectorAll(".key").forEach((key) => {
       userInput.value = userInput.value.slice(0, -1);
     } else if (key.id === "enter") {
       document.getElementById("submit-button").click();
+    } else if (key.id === "space") {
+      userInput.value += " ";
     } else {
       userInput.value += keyValue;
     }
   });
 });
-/*
+
 userInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
-    validateWord(); 
+    document.getElementById("submit-button").click();
   }
 });
-*/
 const attempts = [];
 
 function validateWord() {
@@ -122,13 +122,13 @@ function validateWord() {
 }
 
 document.getElementById("repeat-button").addEventListener("click", () => {
-  playWord(); // Appelle la fonction qui lit le mot actuel
+  playWord();
 });
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]]; // Échanger les éléments
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
 

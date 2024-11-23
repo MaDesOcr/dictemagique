@@ -14,14 +14,16 @@
         <div id="game-area">
             <p id="prompt">Écoutez et écrivez le mot :</p>
             <input type="text" id="user-input" placeholder="Écrivez ici..." />
+            <button id="repeat-button">🔁 Répéter le mot</button>
+
             <div id="controls">
                 <button id="submit-button">Valider</button>
-                <button id="repeat-button">🔁 Répéter le mot</button>
             </div>
             <div id="counter">
                 <p><span id="total-words"></span> mots au total</p>
                 <p style="color: green;">Réussis : <span id="correct-count">0</span></p>
-                <p style="color: red;">Ratés : <span id="incorrect-count">0</span></p>
+                <p style="color: red;">Erreurs : <span id="incorrect-count">0</span></p>
+                <p><span id="feedback"></span></p>
             </div>
             <button id="restart-button" class="restart-button">🔄 Rejouer</button>
         </div>
