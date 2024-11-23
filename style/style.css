@@ -1,4 +1,4 @@
-/* General styles for desktop-first design */
+/* Général */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,44 +12,44 @@ body {
 }
 
 .container {
-    max-width: 90%;
-    width: 800px;
-    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
     text-align: center;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
+/* Titre */
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 5px 0;
 }
 
-/* Input and button styling */
+/* Champ de saisie */
 #user-input {
     width: 80%;
-    max-width: 400px;
-    padding: 12px;
-    margin: 15px auto;
-    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    display: block;
 }
 
+/* Boutons */
 button {
-    margin: 10px;
-    padding: 12px 24px;
+    margin: 5px;
+    padding: 8px 16px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 0.9em;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
 }
 
 button:hover {
@@ -59,43 +59,46 @@ button:hover {
 #controls {
     display: flex;
     justify-content: center;
+    gap: 5px;
     flex-wrap: wrap;
-    gap: 10px;
 }
 
+/* Compteur */
 #counter p {
-    margin: 5px 0;
-    font-size: 1em;
-    text-align: center;
+    margin: 3px 0;
+    font-size: 0.9em;
 }
 
+/* Clavier virtuel */
 #virtual-keyboard {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    justify-content: center;
 }
 
 .keyboard-row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 10px;
-    width: 100%;
+    gap: 0px;
 }
 
 .key {
     width: 10%;
-    max-width: 50px;
-    padding: 10px;
+    max-width: 30px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 0.9em;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s;
+
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .key:hover {
@@ -104,52 +107,50 @@ button:hover {
 }
 
 #space {
-    width: 40%;
-    max-width: 150px;
-}
-
-#restart-button {
-    background-color: red;
-    margin-top: 20px;
-}
-
-#restart-button:hover {
-    background-color: #218838;
+    width: 50%;
+    max-width: 120px;
 }
 
 #submit-button{
     background-color: green;
 }
-
-#repeat-button{
-    background-color: green;
+#restart-button {
+    background-color: red;
+    margin-top: 10px;
 }
-/* Responsiveness for smartphones */
+
+#restart-button:hover {
+    background-color: red;
+}
+
+
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5em;
+        font-size: 1.1em;
+        margin: 0;
     }
 
     #user-input {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     button {
-        font-size: 0.8em;
-        padding: 8px;
+        font-size: 0.7em;
+        padding: 4px 8px;
     }
 
     #counter p {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
     .key {
-        width: 15%;
-        max-width: 35px;
-        padding: 6px;
+        width: 10%;
+        max-width: 20px;
+        padding: 12px;
+        font-size: 1em;
     }
 
     #space {
-        width: 80%;
+        width: 70%;
     }
 }
