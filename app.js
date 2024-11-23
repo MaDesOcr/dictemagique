@@ -33,7 +33,6 @@ function startGame() {
     alert("Aucun mot disponible dans la liste.");
     return;
   }
-  gameArea.classList.remove("hidden");
   currentWordIndex = 0;
   playWord();
 }
@@ -85,7 +84,7 @@ const attempts = [];
 function validateWord() {
   const userAnswer = userInput.value.trim();
   const currentWord = words[currentWordIndex];
-  const currentDate = new Date().toLocaleString(); // Date et heure
+  const currentDate = new Date().toLocaleString();
 
   const isCorrect = userAnswer.toLowerCase() === currentWord.toLowerCase();
 
