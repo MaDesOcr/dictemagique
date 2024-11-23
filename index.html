@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictée Magique</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div id="counter">
+        <p><span id="total-words"></span> mots au total</p>
+        <p style="color: green;">Réussis : <span id="correct-count">0</span></p>
+        <p style="color: red;">Ratés : <span id="incorrect-count">0</span></p>
+    </div>
+
+    <div class="container">
+        <h1>Dictée Magique</h1>
+        <button id="start-button">Commencer la dictée</button>
+        <div id="game-area" class="hidden">
+            <p id="prompt">Écoutez et écrivez le mot :</p>
+            <input type="text" id="user-input" placeholder="Écrivez ici..." />
+            <button id="submit-button">Valider</button>
+            <p id="feedback"></p>
+        </div>
+        <button id="repeat-button">🔁 Répéter le mot</button>
+        <button id="restart-button">🔄 Relancer</button>
+
+
+    </div>
+
+    <div id="virtual-keyboard" class="hidden">
+        <!-- Ligne 1 : A à P -->
+        <div class="keyboard-row">
+            <button class="key">A</button>
+            <button class="key">Z</button>
+            <button class="key">E</button>
+            <button class="key">R</button>
+            <button class="key">T</button>
+            <button class="key">Y</button>
+            <button class="key">U</button>
+            <button class="key">I</button>
+            <button class="key">O</button>
+            <button class="key">P</button>
+        </div>
+
+        <!-- Ligne 2 : Q à M -->
+        <div class="keyboard-row">
+            <button class="key">Q</button>
+            <button class="key">S</button>
+            <button class="key">D</button>
+            <button class="key">F</button>
+            <button class="key">G</button>
+            <button class="key">H</button>
+            <button class="key">J</button>
+            <button class="key">K</button>
+            <button class="key">L</button>
+            <button class="key">M</button>
+        </div>
+
+        <!-- Ligne 3 : W à X -->
+        <div class="keyboard-row">
+            <button class="key">W</button>
+            <button class="key">X</button>
+            <button class="key">C</button>
+            <button class="key">V</button>
+            <button class="key">B</button>
+            <button class="key">N</button>
+            <button class="key" id="delete">←</button>
+            <button class="key" id="enter">✔</button>
+        </div>
+
+        <div>
+            <button class="key-espace" id="space">Espace</button>
+        </div>
+        <!-- Ligne 4 : Lettres accentuées -->
+        <div class="keyboard-row">
+            <button class="key">É</button>
+            <button class="key">È</button>
+            <button class="key">Ê</button>
+            <button class="key">Ë</button>
+            <button class="key">À</button>
+            <button class="key">Â</button>
+            <button class="key">Ç</button>
+            <button class="key">Ô</button>
+            <button class="key">Û</button>
+            <button class="key">Î</button>
+            <button class="key">Ï</button>
+            <button class="key">Ù</button>
+            <button class="key">Ü</button>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
