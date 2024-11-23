@@ -109,7 +109,7 @@ button:hover {
 }
 
 #restart-button {
-    background-color: #28a745;
+    background-color: red;
     margin-top: 20px;
 }
 
@@ -117,7 +117,13 @@ button:hover {
     background-color: #218838;
 }
 
+#submit-button{
+    background-color: green;
+}
 
+#repeat-button{
+    background-color: green;
+}
 /* Responsiveness for smartphones */
 @media (max-width: 480px) {
     h1 {
